@@ -56,5 +56,20 @@ class Session1SnippetsTest extends FunSuite {
     assert(indexElem === 3)
   }
 
+  test("Sort array [4, 3, 6, 14, 12, 8] should return array [3, 4, 6, 8, 12, 14]"){
+    val elements:Array[Int] = Array(4, 3, 6, 14, 12, 8)
+    val expectedSorted:Array[Int] = Array(3, 4, 6, 8, 12, 14)
+    val result = Session1Snippets.mergeSort(elements)
+    assert(result.deep === expectedSorted.deep)
+  }
+
+  test("Merge Array [1, 2, 3, 4] and Array [5, 6] should return Array [1,2,3,4,5,6]"){
+    val part1: Array[Int] = Array(1, 2, 3, 4)
+    val part2: Array[Int] = Array(5, 6)
+    val expectedResult: Array[Int] = Array(1,2,3,4,5,6)
+    val result = Session1Snippets.merge(part1, part2)
+    assert(result.deep == expectedResult.deep)
+  }
+
 
 }

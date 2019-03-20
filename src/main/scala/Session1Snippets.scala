@@ -28,7 +28,6 @@ object Session1Snippets {
     return resultVector
   }
 
-  //code here
   def head(elements: Array[String]): String = {
     elements(0)
   }
@@ -37,6 +36,34 @@ object Session1Snippets {
     for(index <- 0 to elements.length - 1)
       if(elements(index) == elem) return index
     -1
+  }
+
+  def merge(par1: Array[Int], par2: Array[Int]) : Array[Int] = {
+    val complete = Array.ofDim[Int](par1.length + par2.length)
+    var i: Int = 0; var j: Int = 0; var k = 0;
+    while(i < par1.length && j < par2.length) {
+      if(par1(i) < par2(j)) {
+        complete(k) = par1(i); i = i + 1
+      } else {
+        complete(k) = par2(j); j = j + 1
+      }
+      k = k + 1
+    }
+    while (i < par1.length){
+      complete(k) = par1(i); i = i + 1; k = k + 1
+    }
+    while (j < par2.length){
+      complete(k) = par2(j); j = j + 1; k = k + 1
+    }
+    complete
+  }
+
+  def mergeSort(elements: Array[Int]): Array[Int] ={
+    if(elements.length == 1 || elements.length == 0) return elements
+    val mid = elements.length / 2;
+    val part1 = elements.slice(0, mid)
+    val part2 = elements.slice(mid, elements.length + 1)
+    return merge(mergeSort(part1), mergeSort(part2))
   }
 
 }
