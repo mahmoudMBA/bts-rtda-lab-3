@@ -1,6 +1,18 @@
-object Session1Snippets {
+package section1
 
-  def _binarySearch(elements: Array[Int], elem: Int, from: Int, to: Int): Int = {
+object ComplexitySnippets {
+
+  def min(inputArray: Array[Int]) : Int = {
+    var minValue: Int = Int.MaxValue
+    for(item <- inputArray){
+      if(item < minValue) minValue = item
+    }
+    return minValue
+  }
+
+
+  def _binarySearch(elements: Array[Int], elem: Int, from: Int,
+                    to: Int): Int = {
     if(from > to)
       return -1
     val mid = (from + to) / 2
@@ -16,7 +28,8 @@ object Session1Snippets {
   }
 
 
-  def multiply(matrix: Array[Array[Int]], vector: Array[Int]): Array[Int] = {
+  def multiply(matrix: Array[Array[Int]], vector: Array[Int])
+  : Array[Int] = {
     val resultVector:Array[Int] = Array.ofDim(matrix.length)
     for(i <- 0 to matrix.length - 1) {
       var dotProduct = 0;
