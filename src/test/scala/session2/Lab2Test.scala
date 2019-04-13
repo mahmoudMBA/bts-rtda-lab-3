@@ -9,7 +9,7 @@ class Lab2Test extends FunSuite {
   test("The sum of array [1, 3, 5, 6] should be 15"){
     val expectedSum = 15
     val array: Array[Int] = Array(1,3,5,6)
-    val realSum: Integer = Lab2.max(array)
+    val realSum: Integer = Lab2.sum(array)
     assert(expectedSum == realSum)
   }
 
