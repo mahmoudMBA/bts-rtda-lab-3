@@ -2,7 +2,7 @@ package session2
 
 object Lab2 {
   def sum(array: Array[Int]): Int = {
-    var sumAccumulator: Int = 0;
+    var sumAccumulator: Int = 0
     for(item <- array){
       sumAccumulator+= item
     }
