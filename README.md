@@ -10,7 +10,6 @@ Also to get familiar with Intellij IDE.
 
 ## Order 
 
-
 Given the ```Lab2``` scala ```Object``` definition [Lab2.scala](src/main/scala/session2/Lab2.scala)
 
 1. Implement the following using class ```Lab2Test``` ([Lab2Test.scala](src/test/scala/session2/Lab2Test.scala)) as tester:
@@ -19,3 +18,9 @@ Given the ```Lab2``` scala ```Object``` definition [Lab2.scala](src/main/scala/s
     - Given and array of elements calculate the min
     - Given and array of elements calculate the diff between max and min
     - Given and array of "Double" elements calculate the average
+
+## Intellij
+
+- To run test:
+    - Right click on ```src->scala->session2->Lab2Test``` pick the option ```Run Lab2Test```
+    - Green means test passed, red mean test failure. 
