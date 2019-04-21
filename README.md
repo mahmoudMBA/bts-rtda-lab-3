@@ -9,9 +9,9 @@ The objective of this lab is that students get familiar with Intellij IDE. Aso b
 ## Order 
 
 
-Given the ```Lab2``` scala ```Object``` definition [Lab2.scala](src/scala/session2/Lab2.scala)
+Given the ```Lab2``` scala ```Object``` definition [Lab2.scala](src/main/scala/session2/Lab2.scala)
 
-1. Implement the following using class ```Lab2Test``` [Lab2Test.scala](src/scala/session2/Lab2Test.scala) as tester:
+1. Implement the following using class ```Lab2Test``` [Lab2Test.scala](src/test/scala/session2/Lab2Test.scala) as tester:
     - Given an array of elements calculate the sum
     - Given and array of elements calculate the max
     - Given and array of elements calculate the min
