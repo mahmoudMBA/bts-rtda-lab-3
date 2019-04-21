@@ -1,9 +1,11 @@
 # Implementing basic algorithm on Scala. 
 
-The objective of this lab is that students get familiar with Intellij IDE. Aso be able of solve computational problems, using basic Scala constructions as:
+The objective of this lab is to solve computational problems, using basic Scala constructions as:
 1. Variable definitions, conditionals, loops.
 2. Scala Objects, function and methods.
-3. Test using features of ```scalatest``` package.     
+3. Test using features of ```scalatest``` package.
+
+Also to get familiar with Intellij IDE.     
    
 
 ## Order 
