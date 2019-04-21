@@ -23,9 +23,9 @@ class Lab2Test extends FunSuite {
     assert(expectedMax == realMax)
   }
 
-/*
-  Given and array of elements calculate the min
-*/
+  /*
+    Given and array of elements calculate the min
+  */
   test("The min of array [1, 3, 5, 6] should be 5"){
     val expectedMin : Int = 1
     val array: Array[Int] = Array(1,3,5,6)
