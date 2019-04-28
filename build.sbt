@@ -1,4 +1,4 @@
-name := "snipeds"
+name := "bts-rtda-lab-3"
 
 version := "0.1"
 
