@@ -1,7 +1,7 @@
 package session3
 
 import org.scalatest.{FunSuite, Matchers}
-import session3.models.{MostCommonBirdView, Sighting, TotalAmountView, UniquesBirdTypeDetectedView}
+import session3.models.{MostCommonBirdView, Sighting, TotalAmountView, UniquesBirdTypeDetectedView,CountrySightedCountView,TwoMostSightingCountriesView}
 import session3.services.ViewCreatorService
 
 class ViewCreatorServiceTest extends FunSuite with Matchers {
@@ -77,5 +77,41 @@ class ViewCreatorServiceTest extends FunSuite with Matchers {
 
     realMostCommonBirdView should be (expectedMostCommonBirdView)
 
+  }
+
+  test("Should create a CountrySightedCountView(7) object from Sighting Seq"){
+    val inputSightingSeq:Seq[Sighting]  = Seq(
+      Sighting(12, "Italy"),
+      Sighting(3, "Germany"),
+      Sighting(1, "Italy"),
+      Sighting(56, "England"),
+      Sighting(1, "Cuba"),
+      Sighting(567, "Germany"),
+      Sighting(1, "EEUU"),
+    )
+
+    val expectedUniquesCoutryDetectedView = CountrySightedCountView(5)
+
+    val realUniquesCountryDetectedView: CountrySightedCountView = ViewCreatorService.createCountrySightedCountView(inputSightingSeq)
+
+    realUniquesCountryDetectedView should be (expectedUniquesCoutryDetectedView)
+  }
+
+  test("Should create a two most view countries(2) object from Sighting Seq"){
+    val inputSightingSeq:Seq[Sighting]  = Seq(
+      Sighting(12, "Italy"),
+      Sighting(3, "Germany"),
+      Sighting(1, "Italy"),
+      Sighting(56, "England"),
+      Sighting(1, "Cuba"),
+      Sighting(567, "Germany"),
+      Sighting(1, "EEUU"),
+    )
+
+    val expectedTwoCountriesDetectedView = TwoMostSightingCountriesView("Italy, Germany")
+
+    val realUniquesCountryDetectedView: TwoMostSightingCountriesView = ViewCreatorService.createTwoMostSightingCountriesView(inputSightingSeq)
+
+    realUniquesCountryDetectedView should be (expectedTwoCountriesDetectedView)
   }
 }
