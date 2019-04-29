@@ -54,6 +54,28 @@ The app should satisfy the following user stories .
    Most Common Bird: (1, 3)
    ``` 
 
+4. As a biologic scientists i need to know the total amount of countries where at least one bird was sighted. 
+       - Te app should produce a view (as text file) with the following structure:
+   
+   ```text
+   file:country_sighted_count_view.txt
+   ---------------------
+   Country Sighted Count: 6
+ 
+   ``` 
+   
+5. As a biologic scientists i need to know the two countries with more sighting. 
+       - Te app should produce a view (as text file) with the following structure:
+   
+   ```text
+   file:two_most_sighting_countries_view.txt
+   ---------------------
+   Two Most Sighting Countries: 
+ 
+   ``` 
+   
+
+
 ## Intellij
 
 - To run test:
