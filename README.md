@@ -2,7 +2,7 @@
 
 The objective of this lab is to solve computational problems, using basic Scala constructions as:
 1. Scala programs using Object and Main method.
-2. Case class definitions. Reading writing text files.
+2. Case class definitions. Reading/writing text files.
 4. Scala basic data structures: Map, Par, Seq.
 3. Test using features of ```scalatest``` package.
 
@@ -25,22 +25,37 @@ file:sightings.txt:
 ...
 ```
 
-Add the following functionalities to the Object ```MigratoryBirds```.   
+The app should satisfy the following user stories .   
 
-1. Read from ```sightings.txt``` file an produce a ```Seq``` of ```String```.
-2. Take a sighting par ```String``` and produce an object of type ```case class Sighting```.   
-3.  
-4. Total amount of sightings. Te app should produce a view (as text file) with the following structure:
-```
-file:total_amount_view.txt
----------------------
-Total sightings: 6
-``` 
-4. 
+1. As a biologic scientists i need to know the Total amount of sightings. 
+    - Te app should produce a view (as text file) with the following structure:
+    
+    ```
+    file:total_amount_view.txt
+    ---------------------
+    Total sightings: 6
+    ``` 
 
+2. As a biologic scientists i need to know the Uniques Bird Type Detected. 
+    - Te app should produce a view (as text file) with the following structure:
+
+    ```text
+    file:uniques_birdType_detected_view.txt
+    ---------------------
+    Uniques Bird Type Detected: 6
+    ``` 
+
+3. As a biologic scientists i need to know the Uniques Bird Type Detected. 
+       - Te app should produce a view (as text file) with the following structure:
+   
+   ```text
+   file:most_common_bird_view.txt
+   ---------------------
+   Most Common Bird: (1, 3)
+   ``` 
 
 ## Intellij
 
 - To run test:
-    - Right click on ```src->scala->session2->Lab2Test``` pick the option ```Run Lab2Test```
+    - Right click on ```src->scala->session3``` pick the option ```Run ScalaTests on...```
     - Green means test passed, red mean test failure. 

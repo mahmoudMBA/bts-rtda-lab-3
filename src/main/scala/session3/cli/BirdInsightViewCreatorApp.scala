@@ -1,14 +1,21 @@
 package session3.cli
 
 import session3.models.{Sighting, View}
-import session3.services.{ConsoleViewWriterService, TransformService, ViewCreatorService, ViewWriter}
+import session3.services.{ConsoleViewWriterService, FileViewWriterService, TransformService, ViewCreatorService, ViewWriter}
 
 import scala.io.Source
 
 object BirdInsightViewCreatorApp {
-  val inputFileName: String = "/tmp/sightings.txt"
+  var inputFileName: String = "sightings.txt"
+  var outputTo: String = "console"
 
   def main(args: Array[String]): Unit = {
+    if(args.size > 0)
+     inputFileName = args(0)
+
+    if(args.size > 1)
+      outputTo = "file"
+
     val lines = Source.fromFile(inputFileName).getLines().toSeq
     val sightings: Seq[Sighting] = TransformService.execute(lines)
 
@@ -17,7 +24,13 @@ object BirdInsightViewCreatorApp {
     views ::= ViewCreatorService.createUniquesBirdTypeDetectedView(sightings)
     views ::= ViewCreatorService.createMostCommonBirdView(sightings)
 
-    val writer: ViewWriter = new ConsoleViewWriterService()
+    var writer: ViewWriter = null
+
+    if(outputTo.equals("console"))
+      writer = new ConsoleViewWriterService()
+    else
+      writer = new FileViewWriterService()
+
     for (view <- views) {
       writer.write(view)
     }
