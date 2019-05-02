@@ -23,6 +23,8 @@ object BirdInsightViewCreatorApp {
     views ::= ViewCreatorService.createTotalAmountView(sightings)
     views ::= ViewCreatorService.createUniquesBirdTypeDetectedView(sightings)
     views ::= ViewCreatorService.createMostCommonBirdView(sightings)
+    views ::= ViewCreatorService.createCountrySightedCountView(sightings)
+    views ::= ViewCreatorService.createTwoMostSightingCountriesView(sightings)
 
     var writer: ViewWriter = null
 

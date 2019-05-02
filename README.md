@@ -28,8 +28,8 @@ file:sightings.txt:
 The app should satisfy the following user stories .   
 
 1. As a biologic scientists i need to know the Total amount of sightings. 
-    - Te app should produce a view (as text file) with the following structure:
-    
+    - The app should produce a view (as text file) with the following structure:
+    ********
     ```
     file:total_amount_view.txt
     ---------------------
@@ -37,7 +37,7 @@ The app should satisfy the following user stories .
     ``` 
 
 2. As a biologic scientists i need to know the Uniques Bird Type Detected. 
-    - Te app should produce a view (as text file) with the following structure:
+    - The app should produce a view (as text file) with the following structure:
 
     ```text
     file:uniques_birdType_detected_view.txt
@@ -46,7 +46,7 @@ The app should satisfy the following user stories .
     ``` 
 
 3. As a biologic scientists i need to know the Uniques Bird Type Detected. 
-       - Te app should produce a view (as text file) with the following structure:
+       - The app should produce a view (as text file) with the following structure:
    
    ```text
    file:most_common_bird_view.txt
@@ -55,7 +55,7 @@ The app should satisfy the following user stories .
    ``` 
 
 4. As a biologic scientists i need to know the total amount of countries where at least one bird was sighted. 
-       - Te app should produce a view (as text file) with the following structure:
+       - The app should produce a view (as text file) with the following structure:
    
    ```text
    file:country_sighted_count_view.txt
@@ -65,7 +65,7 @@ The app should satisfy the following user stories .
    ``` 
    
 5. As a biologic scientists i need to know the two countries with more sighting. 
-       - Te app should produce a view (as text file) with the following structure:
+       - The app should produce a view (as text file) with the following structure:
    
    ```text
    file:two_most_sighting_countries_view.txt
